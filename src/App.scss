@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Revalia';
-  src: url('./fonts/Revalia-Regular.ttf') format('truetype');
-  /* Add more formats if necessary */
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Revalia';
+    src: url('./fonts/Revalia-Regular.ttf') format('truetype');
+    /* Add more formats if necessary */
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -17,7 +17,7 @@ $desc-letter-spacing: 0.3em;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,0.6),);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6), );
 
     .intro {
         display: flex;
@@ -49,28 +49,38 @@ $desc-letter-spacing: 0.3em;
 
         .subtitle {
             background-color: #6a45ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.3rem;
+            margin-bottom: 5rem;
             width: 100%;
-            text-align: center;
-            max-width: 100%;
-            height: 4.3rem;
 
             p {
                 color: white;
-                font-size: 2.2rem;
+                font-size: 2rem;
                 line-height: 0;
-                letter-spacing: $letter-spacing-value;
-                font-weight: 500;
+                letter-spacing: $desc-letter-spacing;
+                font-weight: 400;
+                margin: 0;
+                /* Remove default margin */
             }
         }
 
         .description {
+            display: flex;
             text-align: center;
-            max-width: 70%; /* Adjusted max-width for description */
+            max-width: 70%;
+            /* Adjusted max-width for description */
+            margin-top: -4.5rem;
+            margin-bottom: 5rem;
+            /* Adjusted margin to move the description closer to the subtitle */
 
             p {
                 color: white;
-                max-width: 100%; /* Adjusted max-width for paragraph */
-                font-size: 1.2rem;
+                max-width: 100%;
+                /* Adjusted max-width for paragraph */
+                font-size: 1.3rem;
                 letter-spacing: $letter-spacing-value;
             }
         }
@@ -81,6 +91,7 @@ $desc-letter-spacing: 0.3em;
             justify-content: flex-end;
             align-items: center;
 
+
             p {
                 color: white;
                 letter-spacing: $desc-letter-spacing;
@@ -88,8 +99,8 @@ $desc-letter-spacing: 0.3em;
         }
 
         .indicator {
-            border-left: 0.0625rem solid white;
-            height: 2.8125rem;
+            border-left: 0.09rem solid white;
+            height: 4.2rem;
         }
     }
 }
@@ -105,7 +116,8 @@ $desc-letter-spacing: 0.3em;
         }
 
         .description {
-            max-width: 80%; /* Adjusted max-width for description in mobile */
+            max-width: 80%;
+            /* Adjusted max-width for description in mobile */
 
             p {
                 color: rgba(255, 255, 255, 80%);
