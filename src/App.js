@@ -28,28 +28,28 @@ function App() {
       </div>
       <div className="section services">
         <div className="heading">
-          <p>Lorem</p>
+          <h1>Lorem</h1>
           <p>subtitle</p>
         </div>
         <div className="details">
           <div className="image-example first">
             <div className="text-example">
               <p className="web-enum">01</p>
-              <p>Lorem ipsum dolor sit</p>
+              <h3>Lorem ipsum dolor sit</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </div>
           </div>
           <div className="image-example second">
             <div className="text-example">
-              <p className="web-enum">01</p>
-              <p>Lorem ipsum dolor sit</p>
+              <p className="web-enum">02</p>
+              <h3>Lorem ipsum dolor sit</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </div>
           </div>
           <div className="image-example third">
             <div className="text-example">
-              <p className="web-enum">01</p>
-              <p>Lorem ipsum dolor sit</p>
+              <p className="web-enum">03</p>
+              <h3>Lorem ipsum dolor sit</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </div>
           </div>
