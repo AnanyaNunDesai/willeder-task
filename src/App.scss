@@ -1,4 +1,14 @@
+@font-face {
+  font-family: 'Revalia';
+  src: url('./fonts/Revalia-Regular.ttf') format('truetype');
+  /* Add more formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 $base-font-size: 16px;
+$letter-spacing-value: 0.4em;
 
 .home-page {
     margin: 0;
@@ -23,7 +33,11 @@ $base-font-size: 16px;
 
             h1 {
                 color: white;
-                font-size: 8rem;
+                font-size: 5rem;
+                font-family: Revalia;
+                font-weight: 100;
+                letter-spacing: $letter-spacing-value;
+                margin-left: 0.1rem;
             }
 
             img {
@@ -47,11 +61,12 @@ $base-font-size: 16px;
 
         .description {
             text-align: center;
-            max-width: 21.875rem;
+            max-width: 80%; /* Adjusted max-width for description */
 
             p {
                 color: white;
-                max-width: 37.5rem;
+                max-width: 100%; /* Adjusted max-width for paragraph */
+                font-size: 1.5rem;
             }
         }
 
@@ -79,13 +94,12 @@ $base-font-size: 16px;
 
         .subtitle {
             background-color: transparent;
-            /* Change background to transparent */
             max-width: 9.375rem;
             font-weight: 500;
         }
 
         .description {
-            max-width: 21.875rem;
+            max-width: 80%; /* Adjusted max-width for description in mobile */
 
             p {
                 color: rgba(255, 255, 255, 80%);
@@ -98,7 +112,6 @@ $base-font-size: 16px;
     @media (max-width: 48rem) {
         .subtitle {
             background-color: transparent !important;
-            /* Important to override */
         }
     }
 }
