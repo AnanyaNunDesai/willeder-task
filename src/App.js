@@ -22,7 +22,7 @@ function App() {
           </p>
         </div>
         <div className="invite-scroll">
-          <p>Scroll</p>
+          <p>scroll</p>
           <div className="indicator"></div>
         </div>
       </div>
