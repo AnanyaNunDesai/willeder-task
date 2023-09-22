@@ -340,7 +340,6 @@ $desc-letter-spacing: 0.3em;
             width: 7rem;
             /* Adjust the width and height to make it the desired size */
             height: 7rem;
-            // -webkit-animation: rescale 2s infinite;
             animation: logoAnimation 6s infinite;
 
             .triangle {
@@ -378,52 +377,6 @@ $desc-letter-spacing: 0.3em;
                 bottom: 0;
                 transform: rotate(180deg)
             }
-
-            // @-webkit-keyframes rescale {
-            //     0% {
-            //         transform: rotate(0deg);
-            //     }
-
-            //     10% {
-            //         transform: rotate(36deg);
-            //     }
-
-            //     20% {
-            //         transform: rotate(72deg);
-            //     }
-
-            //     30% {
-            //         transform: rotate(108deg);
-            //     }
-
-            //     40% {
-            //         transform: rotate(144deg);
-            //     }
-
-            //     50% {
-            //         transform: rotate(180deg);
-            //     }
-
-            //     60% {
-            //         transform: rotate(216deg);
-            //     }
-
-            //     70% {
-            //         transform: rotate(252deg);
-            //     }
-
-            //     80% {
-            //         transform: rotate(288deg);
-            //     }
-
-            //     90% {
-            //         transform: rotate(334deg);
-            //     }
-
-            //     100% {
-            //         transform: rotate(360deg);
-            //     }
-            // }
 
             @keyframes logoAnimation {
 
@@ -469,12 +422,15 @@ $desc-letter-spacing: 0.3em;
                 gap: 10rem;
                 margin: 3rem 0 3rem 0;
                 color: white;
+                letter-spacing: $desc-letter-spacing;
+                font-size: 0.7rem;
+                font-weight: 500;
             }
 
             .social-divider {
                 background-color: white;
                 height: 0.25rem;
-                width: 70%;
+                width: 60rem;
             }
 
             .social-media {
@@ -482,11 +438,14 @@ $desc-letter-spacing: 0.3em;
                 display: flex;
                 flex-direction: row;
                 gap: 5rem;
+                margin-bottom: 0;
             }
 
             .copyright {
                 margin: 2rem 0 2rem 0;
                 color: white;
+                font-weight: 300;
+                font-size: 0.7rem;
             }
         }
     }
@@ -672,7 +631,7 @@ $desc-letter-spacing: 0.3em;
                 .social-media {
                     margin-top: 0.5rem;
                     padding: 0 1rem 0 1rem;
-                    gap: 3rem;
+                    gap: 1.5rem;
                     color: white;
                 }
             }
