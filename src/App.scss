@@ -337,9 +337,11 @@ $desc-letter-spacing: 0.3em;
 
         .square-container {
             position: relative;
-            width: 200px;
+            width: 7rem;
             /* Adjust the width and height to make it the desired size */
-            height: 200px;
+            height: 7rem;
+            // -webkit-animation: rescale 2s infinite;
+            animation: logoAnimation 6s infinite;
 
             .triangle {
                 position: absolute;
@@ -349,33 +351,98 @@ $desc-letter-spacing: 0.3em;
             }
 
             .top-left {
-                border-width: 100px;
+                border-width: 3.5rem;
                 border-color: #8BFF54 transparent transparent transparent;
                 top: 0;
                 left: 0;
             }
 
             .top-right {
-                border-width: 100px;
+                border-width: 3.5rem;
                 border-color: transparent transparent transparent #6587FF;
                 top: 0;
                 right: 0;
             }
 
             .bottom-left {
-                border-width: 100px;
+                border-width: 3.5rem;
                 border-color: transparent transparent #FF5252 transparent;
                 bottom: 0;
                 left: 0;
             }
 
             .bottom-right {
-                border-width: 100px;
+                border-width: 3.5rem;
                 border-color: transparent transparent transparent #E9FF60;
                 right: 0;
                 bottom: 0;
                 transform: rotate(180deg)
-                
+            }
+
+            // @-webkit-keyframes rescale {
+            //     0% {
+            //         transform: rotate(0deg);
+            //     }
+
+            //     10% {
+            //         transform: rotate(36deg);
+            //     }
+
+            //     20% {
+            //         transform: rotate(72deg);
+            //     }
+
+            //     30% {
+            //         transform: rotate(108deg);
+            //     }
+
+            //     40% {
+            //         transform: rotate(144deg);
+            //     }
+
+            //     50% {
+            //         transform: rotate(180deg);
+            //     }
+
+            //     60% {
+            //         transform: rotate(216deg);
+            //     }
+
+            //     70% {
+            //         transform: rotate(252deg);
+            //     }
+
+            //     80% {
+            //         transform: rotate(288deg);
+            //     }
+
+            //     90% {
+            //         transform: rotate(334deg);
+            //     }
+
+            //     100% {
+            //         transform: rotate(360deg);
+            //     }
+            // }
+
+            @keyframes logoAnimation {
+
+                0%,
+                100% {
+                    transform: rotate(360deg) scale(1);
+                }
+
+                25% {
+                    transform: rotate(0deg) scale(1);
+                }
+
+                50% {
+                    transform: rotate(0deg) scale(1.5);
+                }
+
+                75% {
+                    transform: rotate(0deg) scale(1);
+                }
             }
         }
     }
@@ -547,6 +614,12 @@ $desc-letter-spacing: 0.3em;
                 width: 100%;
                 box-sizing: border-box;
                 padding-left: 1rem;
+                font-size: 0.7rem;
+
+                .click-me {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
 
                 .explain-details {
                     width: 75%;
@@ -556,6 +629,9 @@ $desc-letter-spacing: 0.3em;
             .title-underline {
                 .title-text {
                     margin-left: 1rem;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    letter-spacing: $desc-letter-spacing;
                 }
 
                 .underline-bar {
@@ -569,7 +645,8 @@ $desc-letter-spacing: 0.3em;
     }
 
     .contact-us {
-        top: 400vh;
+
+        padding-top: 10rem;
 
         .company-farewell {
             height: 35%;
