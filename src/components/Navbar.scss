@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Revalia';
   src: url('./../fonts/Revalia-Regular.ttf') format('truetype');
-  /* Add more formats if necessary */
   font-weight: normal;
   font-style: normal;
 }
@@ -15,8 +14,9 @@ $navbar-letter-spacing: 0.3em;
   background-color: $navbar-background-color;
   box-shadow: $navbar-box-shadow;
   box-sizing: border-box;
-  padding-left: 0.5rem; /* Adjusted padding */
-  position: sticky;
+  padding-left: 0.5rem;
+  /* Adjusted padding */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -28,19 +28,32 @@ $navbar-letter-spacing: 0.3em;
   align-items: center;
   justify-content: space-between;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   img {
-    max-width: 20%; /* Adjusted max-width */
-    max-height: 20%; /* Adjusted max-height */
+    max-width: 20%;
+    /* Adjusted max-width */
+    max-height: 20%;
+    /* Adjusted max-height */
     height: auto;
   }
 
   .logo {
-    padding-left: 3rem; /* Adjusted padding */
+    padding-left: 3rem;
+    /* Adjusted padding */
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.625rem; /* Converted from 10px */
-    width: 11rem; /* Adjusted width */
+    gap: 0.625rem;
+    width: 11rem;
+    /* Adjusted width */
 
     h1 {
       font-size: 1.5rem;
@@ -54,7 +67,7 @@ $navbar-letter-spacing: 0.3em;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    gap: 7.5rem; /* Converted from 120px */
+    gap: 7.5rem;
     letter-spacing: $navbar-letter-spacing;
     font-size: 0.8rem;
     font-weight: 500;
@@ -67,17 +80,22 @@ $navbar-letter-spacing: 0.3em;
 
 @media (max-width: 48rem) {
   .navbar {
-    padding: 0.4rem 1rem; /* Adjusted padding */
+    padding: 0.4rem 1rem;
+    /* Adjusted padding */
 
     img {
-      max-width: 22%; /* Adjusted max-width */
-      max-height: 50%; /* Adjusted max-height */
+      max-width: 22%;
+      /* Adjusted max-width */
+      max-height: 50%;
+      /* Adjusted max-height */
       height: auto;
     }
 
     .logo {
-      padding-left: 0.2rem; /* Adjusted padding */
-      width: 9rem; /* Adjusted width */
+      padding-left: 0.2rem;
+      /* Adjusted padding */
+      width: 9rem;
+      /* Adjusted width */
 
       h1 {
         font-size: 1.5rem;

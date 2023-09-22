@@ -8,9 +8,9 @@ function Navbar() {
         <h1 className="text">LOGO</h1>
       </div>
       <div className="page-items">
-        <p>Home</p>
-        <p>Page 1</p>
-        <p>Page 2</p>
+        <a href="#home">Home</a>
+        <a href="#services">Page 1</a>
+        <a href="#see-more">Page 2</a>
       </div>
       <img
         className="mobile-details"

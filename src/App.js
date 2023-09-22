@@ -25,8 +25,7 @@ function App() {
     if (!isMobile) {
       return (
         <div
-          className="explain-subsection
-          "
+          className="explain-subsection"
         >
           <img
             className="explain-img"
@@ -88,7 +87,7 @@ function App() {
   }
 
   return (
-    <div className="home-page">
+    <div id="home" className="home-page">
       <Navbar />
       <Carousel />
       <div className="section intro">
@@ -112,7 +111,7 @@ function App() {
           <div className="indicator"></div>
         </div>
       </div>
-      <div className="section services">
+      <div id="services" className="section services">
         <div className="heading">
           <h1>Lorem</h1>
           <p>subtitle</p>
@@ -142,7 +141,7 @@ function App() {
         </div>
         <div className="path-bar" />
       </div>
-      <div className="section see-more">
+      <div id="see-more" className="section see-more">
         {arrangeSeeMoreSubsection()}
         <div className="path-bar" />
       </div>
