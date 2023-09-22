@@ -20,6 +20,7 @@ $desc-letter-spacing: 0.3em;
 
 .section {
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,9 +30,15 @@ $desc-letter-spacing: 0.3em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     flex-grow: 1;
     max-height: 100vh;
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
 
     .logo {
         display: flex;
@@ -40,17 +47,17 @@ $desc-letter-spacing: 0.3em;
         gap: 0.625rem;
         margin-bottom: 3.125rem;
 
-        h1 {
+        img {
+            max-width: 10rem;
+        }
+
+        .text {
             color: white;
             font-size: 5rem;
             font-family: Revalia;
             font-weight: 100;
             letter-spacing: $letter-spacing-value;
             margin-left: 0.1rem;
-        }
-
-        img {
-            max-width: 10rem;
         }
     }
 
@@ -60,17 +67,15 @@ $desc-letter-spacing: 0.3em;
         align-items: center;
         justify-content: center;
         height: 3.3rem;
-        margin-bottom: 5rem;
+        margin-bottom: 0.5rem;
         width: 100%;
 
         p {
             color: white;
-            font-size: 2rem;
-            line-height: 0;
+            font-size: 1.5rem;
             letter-spacing: $desc-letter-spacing;
             font-weight: 400;
-            margin: 0;
-            /* Remove default margin */
+            margin: 0 1rem 0 1rem;
         }
     }
 
@@ -79,7 +84,6 @@ $desc-letter-spacing: 0.3em;
         text-align: center;
         max-width: 70%;
         /* Adjusted max-width for description */
-        margin-top: -4.5rem;
         margin-bottom: 5rem;
         /* Adjusted margin to move the description closer to the subtitle */
 
@@ -93,6 +97,8 @@ $desc-letter-spacing: 0.3em;
     }
 
     .invite-scroll {
+        position: absolute;
+        top: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -111,15 +117,15 @@ $desc-letter-spacing: 0.3em;
 }
 
 .services {
-    top: 100vh;
+    top: 100%;
     width: 100%;
     position: absolute;
-    max-height: 120vh;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 15rem;
 
     .heading {
         z-index: 2;
@@ -146,7 +152,7 @@ $desc-letter-spacing: 0.3em;
     .path-bar {
         width: 17.5rem;
         position: absolute;
-        height: 120vh;
+        height: 100%;
         background-color: #6a45ff;
         left: 50%;
         transform: translateX(-50%);
@@ -161,10 +167,8 @@ $desc-letter-spacing: 0.3em;
         z-index: 2;
         width: 100%;
 
-
         .first {
             background-image: url("../public/images/carousel1.png");
-
         }
 
         .second {
@@ -189,7 +193,7 @@ $desc-letter-spacing: 0.3em;
             overflow: hidden;
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -210,7 +214,6 @@ $desc-letter-spacing: 0.3em;
             max-width: 70%;
             z-index: 1;
 
-
             h3 {
                 font-weight: 500;
                 letter-spacing: $desc-letter-spacing;
@@ -227,7 +230,83 @@ $desc-letter-spacing: 0.3em;
                 font-size: 0.8rem;
                 font-weight: 300;
                 letter-spacing: 0.1rem;
+            }
+        }
+    }
+}
 
+.see-more {
+    top: 200%;
+    width: 100%;
+    position: absolute;
+    max-height: 100vh;
+    background-color: #dce1e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    padding-top: 10rem;
+
+    .path-bar {
+        width: 17.5rem;
+        position: absolute;
+        height: 100vh;
+        background-color: #6a45ff;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .explain-subsection {
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vh;
+        width: 100%;
+
+        .explain-img {
+            max-width: 100%;
+            max-height: 50%;
+            overflow: hidden;
+            float: left;
+            width: 75%;
+        }
+
+        .explain-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            float: right;
+            font-size: 0.8rem;
+            width: 25%;
+
+            .title-underline {
+                margin: 1rem 0 1rem 0;
+                max-width: 100%;
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    letter-spacing: $desc-letter-spacing;
+                }
+
+                .underline-bar {
+                    width: 20rem;
+                    height: 0.4rem;
+                    background-color: #6a45ff;
+                }
+            }
+
+            .click-me {
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                font-size: 0.7rem;
+                font-weight: 500;
+                letter-spacing: $desc-letter-spacing;
             }
         }
     }
@@ -237,34 +316,62 @@ $desc-letter-spacing: 0.3em;
     .intro {
         justify-content: center;
 
+        .logo {
+            img {
+                max-width: 6rem;
+            }
+
+            .text {
+                font-size: 3rem;
+            }
+        }
+
+        .about {
+            margin-top: 5rem;
+        }
+
         .subtitle {
-            background-color: transparent !important;
-            max-width: 9.375rem;
+            text-align: center;
+            background-color: transparent;
             font-weight: 500;
+
+            p {
+                font-weight: 600;
+            }
         }
 
         .description {
-            max-width: 80%;
+            margin-top: 0.5rem;
+            max-width: 75%;
 
             p {
-                color: rgba(255, 255, 255, 80%);
-                font-weight: 100;
+                font-size: 0.7rem;
+                font-weight: 300;
             }
         }
+
     }
 
+
     .services {
-        height: 235vh;
+        height: 200vh;
 
         .heading {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
+            margin: 0 0 2rem 0;
+
+            h1 {
+                color: #6a45ff;
+            }
+
+            p {
+                color: black;
+            }
         }
 
         .path-bar {
             background-color: #6a45ff3d;
             width: 2.5rem;
-            height: 235vh;
+            height: 200vh;
         }
 
         .details {
@@ -281,6 +388,65 @@ $desc-letter-spacing: 0.3em;
 
             .web-enum {
                 display: none;
+            }
+        }
+
+
+        h3 {
+            font-size: 2rem;
+        }
+
+    }
+
+    .see-more {
+        position: absolute;
+        top: 300vh;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        .path-bar {
+            background-color: #6a45ff3d;
+            width: 2.5rem;
+            height: 100vh;
+        }
+
+        .explain-subsection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+
+            .explain-img {
+                width: 80%;
+                height: 100%;
+                float: none;
+                max-width: 100%;
+            }
+
+            .explain-text {
+                float: none;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 1rem;
+
+                .explain-details {
+                    width: 75%;
+                }
+            }
+
+            .title-underline {
+                .title-text {
+                    margin-left: 1rem;
+                }
+
+                .underline-bar {
+                    width: 20rem;
+                    height: 0.4rem;
+                    background-color: #6a45ff;
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
