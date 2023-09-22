@@ -236,16 +236,17 @@ $desc-letter-spacing: 0.3em;
 }
 
 .see-more {
-    top: 200%;
+    top: 200vh;
     width: 100%;
     position: absolute;
-    max-height: 100vh;
+    max-height: 300vh;
     background-color: #dce1e6;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -1;
     padding-top: 10rem;
+    bottom: 50rem;
 
     .path-bar {
         width: 17.5rem;
@@ -263,15 +264,15 @@ $desc-letter-spacing: 0.3em;
         gap: 10rem;
         align-items: center;
         justify-content: center;
-        max-width: 100vh;
+        max-width: 100%;
         width: 100%;
 
         .explain-img {
-            max-width: 100%;
+            max-width: 45%;
             max-height: 50%;
             overflow: hidden;
             float: left;
-            width: 75%;
+            // width: 75%;
         }
 
         .explain-text {
@@ -286,7 +287,7 @@ $desc-letter-spacing: 0.3em;
                 margin: 1rem 0 1rem 0;
                 max-width: 100%;
 
-                p{
+                p {
                     font-size: 1.5rem;
                     font-weight: 500;
                     letter-spacing: $desc-letter-spacing;
@@ -311,6 +312,119 @@ $desc-letter-spacing: 0.3em;
         }
     }
 }
+
+.contact-us {
+    top: 300vh;
+    width: 100%;
+    position: absolute;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-top: 20rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .company-farewell {
+        width: 100%;
+        height: 60%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .square-container {
+            position: relative;
+            width: 200px;
+            /* Adjust the width and height to make it the desired size */
+            height: 200px;
+
+            .triangle {
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+
+            .top-left {
+                border-width: 100px;
+                border-color: #8BFF54 transparent transparent transparent;
+                top: 0;
+                left: 0;
+            }
+
+            .top-right {
+                border-width: 100px;
+                border-color: transparent transparent transparent #6587FF;
+                top: 0;
+                right: 0;
+            }
+
+            .bottom-left {
+                border-width: 100px;
+                border-color: transparent transparent #FF5252 transparent;
+                bottom: 0;
+                left: 0;
+            }
+
+            .bottom-right {
+                border-width: 100px;
+                border-color: transparent transparent transparent #E9FF60;
+                right: 0;
+                bottom: 0;
+                transform: rotate(180deg)
+                
+            }
+        }
+    }
+
+    .company-footer {
+        width: 100%;
+        height: 40%;
+        background-color: #5d6273;
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+        bottom: 0;
+
+        .company-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .pages {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10rem;
+                margin: 3rem 0 3rem 0;
+                color: white;
+            }
+
+            .social-divider {
+                background-color: white;
+                height: 0.25rem;
+                width: 70%;
+            }
+
+            .social-media {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: row;
+                gap: 5rem;
+            }
+
+            .copyright {
+                margin: 2rem 0 2rem 0;
+                color: white;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 48rem) {
     .intro {
@@ -354,7 +468,8 @@ $desc-letter-spacing: 0.3em;
 
 
     .services {
-        height: 200vh;
+        height: 100%;
+        padding-bottom: -2rem;
 
         .heading {
             margin: 0 0 2rem 0;
@@ -371,7 +486,8 @@ $desc-letter-spacing: 0.3em;
         .path-bar {
             background-color: #6a45ff3d;
             width: 2.5rem;
-            height: 200vh;
+            height: 100%;
+            padding-bottom: 0%;
         }
 
         .details {
@@ -400,10 +516,11 @@ $desc-letter-spacing: 0.3em;
 
     .see-more {
         position: absolute;
-        top: 300vh;
-        height: 100vh;
+        top: 150rem;
+        height: 100%;
         display: flex;
         justify-content: center;
+        padding-top: 0%;
 
         .path-bar {
             background-color: #6a45ff3d;
@@ -422,7 +539,7 @@ $desc-letter-spacing: 0.3em;
                 width: 80%;
                 height: 100%;
                 float: none;
-                max-width: 100%;
+                // max-width: 100%;
             }
 
             .explain-text {
@@ -450,7 +567,43 @@ $desc-letter-spacing: 0.3em;
             }
         }
     }
+
+    .contact-us {
+        top: 400vh;
+
+        .company-farewell {
+            height: 35%;
+        }
+
+        .company-footer {
+            height: 65%;
+
+            .company-details {
+                .pages {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 0;
+                }
+
+                .social-divider {
+                    background-color: white;
+                    height: 0.1rem;
+                    width: 80%;
+                }
+
+                .social-media {
+                    margin-top: 0.5rem;
+                    padding: 0 1rem 0 1rem;
+                    gap: 3rem;
+                    color: white;
+                }
+            }
+        }
+    }
 }
+
+
 
 html {
     font-size: $base-font-size;

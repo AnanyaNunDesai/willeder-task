@@ -146,6 +146,36 @@ function App() {
         {arrangeSeeMoreSubsection()}
         <div className="path-bar" />
       </div>
+      <div className="section contact-us">
+        <div className="company-farewell">
+          <div className="square-container">
+            <div className="triangle top-left"></div>
+            <div className="triangle top-right"></div>
+            <div className="triangle bottom-left"></div>
+            <div className="triangle bottom-right"></div>
+          </div>
+        </div>
+
+        <div className="company-footer">
+          <div className="company-details">
+            <div className="pages">
+              <p>Home</p>
+              <p>Page 1</p>
+              <p>Page 2</p>
+            </div>
+            <div className="social-divider" />
+            <div className="social-media">
+              <p>Faceb</p>
+              <p>Twitt</p>
+              <p>Insta</p>
+              <p>TikTk</p>
+            </div>
+            <div className="copyright">
+              <p>Â© Logo, Inc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
